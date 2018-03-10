@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>美文列表</title>
+</head>
+<body>
+<h2>美文列表</h2>
+<hr>
+{% for article in articles %}
+    <p style='font-family:微软雅黑;font-size:14pt;font-weight:bold;'>
+    <a href='/list_article/{{ article.tag}}/'>{{ article.title }}</a>
+    </p>
+    <p style='font-family:微软雅黑;font-size:14pt;font-weight:bold;'>
+	{{ article.title }}
+	{{ article.content }}
+    </p>
+{% endfor %}
+</table>
+<hr>
+<a href='/'>回首页</a>
+</body>
+</html>
